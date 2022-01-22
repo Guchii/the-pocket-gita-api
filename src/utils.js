@@ -1,6 +1,6 @@
-export const filterChapters = (arr, chap = null) =>
+const filterChapters = (arr, chap = null) =>
     arr.filter((el) => el.chapter_number == chap)
-export const filterVerses = (arr, chap = null, verse = null) => {
+const filterVerses = (arr, chap = null, verse = null) => {
     if (verse) {
         return arr.filter(
             (el) => el.chapter_number == chap && el.verse_number == verse
@@ -9,3 +9,5 @@ export const filterVerses = (arr, chap = null, verse = null) => {
         return arr.filter((el) => el.chapter_number == chap)
     }
 }
+
+module.exports = { filterChapters, filterVerses }

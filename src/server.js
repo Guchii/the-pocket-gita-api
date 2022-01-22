@@ -1,8 +1,8 @@
-import express from 'express'
-import chaptersData from '../gita/data/chapters.json'
-import versesData from '../gita/data/verse.json'
-import { filterChapters, filterVerses } from './utils'
-import cors from 'cors'
+const express = require('express')
+const chaptersData = require('../gita/data/chapters.json')
+const versesData = require('../gita/data/verse.json')
+const { filterChapters, filterVerses } = require('./utils')
+const cors = require('cors')
 
 const PORT = process.env.PORT || 3000
 
@@ -49,4 +49,4 @@ app.get('/chapters/:chap/verses/:verse', (req, res) => {
 
 app.listen(PORT, () => console.log('server is up and running'))
 
-export default app
+module.exports = app

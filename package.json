@@ -3,26 +3,16 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
-        "dev": "nodemon ./src/server.js --exec babel-node --presets babel-preset-env",
-        "build": "babel src --out-dir lib  --presets babel-preset-env",
-        "start": "npm run build && node lib/server"
+        "start": "node ./src/server"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
         "cors": "^2.8.5",
-        "express": "^4.17.2",
-        "@babel/cli": "^7.16.8"
+        "express": "^4.17.2"
     },
     "devDependencies": {
-        "@babel/core": "^7.16.10",
-        "@babel/node": "^7.16.8",
-        "@babel/preset-env": "^7.16.11",
-        "babel-cli": "^6.26.0",
-        "babel-core": "^6.26.3",
-        "babel-loader": "^8.2.3",
-        "babel-preset-env": "^1.7.0",
         "nodemon": "^2.0.15"
     }
 }
