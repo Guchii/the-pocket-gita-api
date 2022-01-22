@@ -9,10 +9,17 @@ const app = express()
 app.use(cors())
 
 app.get('/', (req, res) => {
-    res.send(`<h1>The Bhagwad Gita API</h1><br /><ul>
-        <li><a href="/chapters">Chapters</a></li>
-        <li><a href="/verses">Verses</a></li>
-    </ul>`)
+    res.send(`
+    <body style="margin: 0; background: #fafafa;">
+        <div style="font-size: 2rem; display: flex; height: 100vh; width: 100vw; justify-content: center; align-items: center; flex-direction: column;margin: 0; font-weight: bold; font-family: sans-serif; padding: 0; margin: 0;">
+            <h1 style="margin: 0; text-decoration: underline">The Bhagwad Gita API</h1>
+            <ul style="display:flex; justify-content:center; gap:15px;padding:0; list-style-type:none;">
+                <li><a href="/chapters" style="text-decoration:none; color:royalblue;">chapters</a></li>
+                <li><a href="/verses" style="text-decoration:none; color:royalblue;">verses</a></li>
+            </ul>
+        </div>
+    </body>
+    `)
 })
 
 app.get('/chapters', (req, res) => {
