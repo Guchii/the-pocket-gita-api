@@ -4,6 +4,8 @@ import versesData from '../gita/data/verse.json'
 import { filterChapters, filterVerses } from './utils'
 import cors from 'cors'
 
+const PORT = process.env.PORT || 3000
+
 const app = express()
 
 app.use(cors())
@@ -45,6 +47,6 @@ app.get('/chapters/:chap/verses/:verse', (req, res) => {
     if (chap) res.status(200).json(filterVerses(versesData, chap, verse))
 })
 
-app.listen(3000, () => console.log('server is up and running'))
+app.listen(PORT, () => console.log('server is up and running'))
 
 export default app
